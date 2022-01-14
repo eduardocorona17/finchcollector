@@ -22,10 +22,10 @@ def finches_detail(request, finch_id):
     return render(request, 'finches/detail.html', {'finch': finch})
 
 
-# class FinchCreate(CreateView):
-#     model = Finch
-#     fields = '__all__'
-#     success_url = '/finches/'
+class FinchCreate(CreateView):
+    model = Finch
+    fields = '__all__'
+    success_url = '/finches/'
 
 
 class FinchUpdate(UpdateView):
